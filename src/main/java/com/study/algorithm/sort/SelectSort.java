@@ -11,7 +11,7 @@ public class SelectSort extends CustomSort {
 
     public static void main(String[] args) {
         int[] sortArr = Utils.getIntArr(0,100000,100000);
-        new SelectSort(sortArr).go();
+        new SelectSort(sortArr).go("选择",true);
     }
 
     public SelectSort(int[] sortArr) {

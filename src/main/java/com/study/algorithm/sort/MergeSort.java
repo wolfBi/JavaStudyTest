@@ -13,7 +13,7 @@ public class MergeSort extends CustomSort{
 
     public static void main(String[] args) {
         int[] sortArr = Utils.getIntArr(0,100000,100000);
-        new MergeSort(sortArr).go();
+        new MergeSort(sortArr).go("归并",true);
     }
 
     /**
@@ -67,17 +67,7 @@ public class MergeSort extends CustomSort{
             }
         }
     }
-    int[] insertionSort(int[] arr, int l, int r){
-        for (int i = l+1; i <= r ; i++) {
-            int e = arr[i];
-            int j ;
-            for (j = i; j > l && arr[j-1] > e; j--) {
-                arr[j] = arr[j-1];
-            }
-            arr[j] = e;
-        }
-        return arr;
-    }
+
     public MergeSort(int[] sortArr) {
         super(sortArr);
     }

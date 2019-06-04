@@ -10,7 +10,7 @@ public class InsertSort extends CustomSort {
 
     public static void main(String[] args) {
         int[] sortArr = Utils.getIntArr(0,100000,100000);
-        new InsertSort(sortArr).go();
+        new InsertSort(sortArr).go("插入",true);
     }
 
     @Override

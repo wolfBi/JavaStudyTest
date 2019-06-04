@@ -16,7 +16,7 @@ public class BubbleSort extends CustomSort {
 
     public static void main(String[] args) {
         int[] sortArr = Utils.getIntArr(0,10,10);
-        new BubbleSort(sortArr).go();
+        new BubbleSort(sortArr).go("冒泡",true);
     }
 
     public BubbleSort(int[] sortArr) {
@@ -55,13 +55,13 @@ public class BubbleSort extends CustomSort {
      */
     int[] sort1() {
         for(int i =0;i<sortArr.length-1;i++) {
-            System.out.println("run "+i + " limit j < "+(sortArr.length-i-1));
+//            System.out.println("run "+i + " limit j < "+(sortArr.length-i-1));
             for(int j=0;j<sortArr.length-i-1;j++) {//-1为了防止溢出
                 if(sortArr[j]>sortArr[j+1]) {
                     swap(sortArr,j,j+1);
                 }
             }
-            output();
+//            output();
         }
         return sortArr;
     }

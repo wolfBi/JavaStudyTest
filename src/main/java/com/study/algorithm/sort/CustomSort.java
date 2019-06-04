@@ -29,15 +29,15 @@ public class CustomSort {
             System.out.println(" ");
         }
     }
-    void go(){
-        output();
-        System.out.println("排序开始");
+    void go(String name,boolean output){
+        if(output)
+            output();
         long start = System.currentTimeMillis();
         sortArr = sort();
         long end = System.currentTimeMillis();
-        System.out.println("排序结束");
-        output();
-        System.out.println("args = " + (end-start) + "ms");
+        if(output)
+            output();
+        System.out.println(name+"排序结束 耗時 " + (end-start) + "ms");
     }
 
     int[] sort(){
@@ -55,5 +55,16 @@ public class CustomSort {
         int temp=arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
+    }
+    int[] insertionSort(int[] arr, int l, int r){
+        for (int i = l+1; i <= r ; i++) {
+            int e = arr[i];
+            int j ;
+            for (j = i; j > l && arr[j-1] > e; j--) {
+                arr[j] = arr[j-1];
+            }
+            arr[j] = e;
+        }
+        return arr;
     }
 }

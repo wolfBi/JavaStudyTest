@@ -10,7 +10,7 @@ public class ShellSort extends CustomSort {
 
     public static void main(String[] args) {
         int[] sortArr = Utils.getIntArr(0,100000,100000);
-        new ShellSort(sortArr).go();
+        new ShellSort(sortArr).go("希尔",true);
     }
 
     public ShellSort(int[] sortArr) {
