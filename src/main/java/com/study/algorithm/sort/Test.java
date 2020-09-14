@@ -13,6 +13,7 @@ public class Test {
         new QuickSort(sortArr.clone()).go("快速",output);
         new InsertSort(sortArr.clone()).go("插入",output);
         new HeapSort(sortArr.clone()).go("堆",output);
+        new HeapfiySort(sortArr.clone()).go("原地堆",output);
         new ShellSort(sortArr.clone()).go("希尔",output);
         new MergeSort(sortArr.clone()).go("归并",output);
         MergeSort bs = new MergeSort(sortArr.clone());
@@ -25,6 +26,7 @@ public class Test {
         new QuickSort(sortArr.clone()).go("快速",output);
         new InsertSort(sortArr.clone()).go("插入",output);
         new HeapSort(sortArr.clone()).go("堆",output);
+        new HeapfiySort(sortArr.clone()).go("原地堆",output);
         new ShellSort(sortArr.clone()).go("希尔",output);
         new MergeSort(sortArr.clone()).go("归并",output);
 
@@ -34,6 +36,7 @@ public class Test {
 //                    快速排序结束 耗時 14ms
 //        插入排序结束 耗時 822ms
 //                                    堆排序结束 耗時 12ms
+//                                原地堆排序结束 耗時 12ms
 //                            希尔排序结束 耗時 13ms
 //                                    归并排序结束 耗時 12ms
 //        归并排序结束 耗時 8ms
@@ -42,7 +45,8 @@ public class Test {
 //        选择排序结束 耗時 3649ms
 //             快速排序结束 耗時 11ms
 //                                  插入排序结束 耗時 0ms
-//                  堆排序结束 耗時 7ms
+//                  堆排序结束 耗時 6ms
+//              原地堆排序结束 耗時 6ms
 //                        希尔排序结束 耗時 3ms
 //                             归并排序结束 耗時 1ms
 

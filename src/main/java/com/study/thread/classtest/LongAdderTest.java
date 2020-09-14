@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicLong;
-import java.util.concurrent.atomic.LongAdder;
 
 /**
  * JDK 8 新特性LongAdder和AtomicLong的性能测试对比
@@ -47,10 +46,10 @@ public class LongAdderTest {
             list.add(new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    for (int j = 0; j<times; j++){
-                        atomicLong.incrementAndGet();
-                    }
-                    countDownLatch.countDown();
+//                    for (int j = 0; j<times; j++){
+//                        atomicLong.incrementAndGet();
+//                    }
+//                    countDownLatch.countDown();
                 }
             }, "my-thread"+i));
         }
@@ -63,16 +62,16 @@ public class LongAdderTest {
 
     static void testLongAdder(final int threadCount, final int times) throws InterruptedException {
         CountDownLatch countDownLatch = new CountDownLatch(10);
-        LongAdder longAdder = new LongAdder();
+//        LongAdder longAdder = new LongAdder();
         List<Thread> list = new ArrayList<>();
         for (int i=0;i<threadCount;i++){
             list.add(new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    for (int j = 0; j<times; j++){
-                        longAdder.add(1);
-                    }
-                    countDownLatch.countDown();
+//                    for (int j = 0; j<times; j++){
+//                        longAdder.add(1);
+//                    }
+//                    countDownLatch.countDown();
                 }
             }, "my-thread"+i));
         }
